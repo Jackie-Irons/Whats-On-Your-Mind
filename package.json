@@ -1,0 +1,28 @@
+{
+  "name": "Whats-On-Your-Mind",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"nodemon server.js\" \"cd ./client  && yarn start \" ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jay-77/Whats-On-Your-Mind.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jay-77/Whats-On-Your-Mind/issues"
+  },
+  "homepage": "https://github.com/Jay-77/Whats-On-Your-Mind#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "concurrently": "^3.5.0",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.8"
+  }
+}
