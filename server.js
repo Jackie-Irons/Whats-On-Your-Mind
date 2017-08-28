@@ -2,8 +2,8 @@ require("dotenv").config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const postController = require('./controller/post');
-const userController = require('./controller/user');
+const PostController = require('./controller/post');
+const UserController = require('./controller/user');
 const app = express();
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGODB_URI); //mongodb://localhost/whats-on-your-mind
@@ -20,8 +20,8 @@ connection.on('error', (err) => {
 }); 
 
 app.use(bodyParser.json());
-app.use('/api/user', userController);
-app.use('/api/post', postController);
+app.use('/api/user', UserController);
+app.use('/api/post', PostController);
 
 app.get('/', (req,res) => {
   res.send('Hello world!')

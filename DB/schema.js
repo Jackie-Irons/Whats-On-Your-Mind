@@ -21,14 +21,12 @@ const UserSchema = mongoose.Schema({
 
 
 var UserModel = mongoose.model("User", UserSchema);
-
-module.exports = {User: UserModel};
-
 var PostModel = mongoose.model("PostModel", PostSchema);
-
-module.exports = {Post: PostModel};
 
 var CommentModel = mongoose.model("CommentModel", CommentSchema);
 
-module.exports = {Comment: CommentModel};
+module.exports = {
+	User: UserModel,
+	Post: PostModel,
+	Comment: CommentModel};
 
