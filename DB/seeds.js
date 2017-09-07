@@ -8,6 +8,7 @@ var Post = require('../models/post');
 
 var Comment = require('../models/comment');
 
+// native promises
 mongoose.Promise = global.Promise;
 
 User.remove({}, (err) => console.log(err));

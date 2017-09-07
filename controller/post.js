@@ -4,8 +4,10 @@ const router = express.Router()
 
 //get route
 router.get('/', (req, res) => {
+	console.log('hit the post route')
   Post.find()
     .then((posts) => {
+    	console.log(posts)
       res.json(posts)
     })
 })
